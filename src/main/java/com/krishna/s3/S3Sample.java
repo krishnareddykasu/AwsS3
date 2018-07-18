@@ -291,3 +291,5 @@ public class S3Sample {
 		return s3client;
 	}
 }
+
+/* remove '-' in key and id in credential File to run*/
