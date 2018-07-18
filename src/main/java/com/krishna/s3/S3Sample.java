@@ -81,7 +81,7 @@ public class S3Sample {
 
 	private static void listBucketPermissions(AmazonS3 s3client, String string) {
 		
-		AccessControlList bucketAcl = s3client.getBucketAcl("sg00cstaccp");
+		AccessControlList bucketAcl = s3client.getBucketAcl("testingpoc");
 		List<Grant> grantList = bucketAcl.getGrantsAsList();
 		grantList.forEach((temp) -> {
 			System.out.println("All permissions:"+temp.getPermission());
@@ -102,7 +102,7 @@ public class S3Sample {
 	}
 
 	private static void chekcBucketVestionStatus(AmazonS3 s3client) {
-		BucketVersioningConfiguration conf = s3client.getBucketVersioningConfiguration("sg00cstaccp");
+		BucketVersioningConfiguration conf = s3client.getBucketVersioningConfiguration("testingpoc");
 		 System.out.println("bucket versioning configuration status:    " + conf.getStatus());
 		
 	}
